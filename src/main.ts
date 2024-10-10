@@ -16,8 +16,8 @@ async function start() {
       .setVersion("1.0")
       .addTag("NESTJS,  sequelize, pg")
       .build();
-    const document = SwaggerModule.createDocument(app, config);
-    SwaggerModule.setup("api/docs", app, document);
+    // const document = SwaggerModule.createDocument(app, config);
+    // SwaggerModule.setup("api/docs", app, document);
     await app.listen(PORT, () => {
       console.log(`Server is running on http://localhost:${PORT}`);
     });

@@ -11,9 +11,13 @@ export class Tables {
   @Prop()
   amount: number;
 
+  @Prop()
+  qr_code: string;
+
+
   @Prop({
-    type:mongoose.Schema.Types.ObjectId,
-    ref:"Restoran"
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Restoran",
   })
   restoran_id: Restoran;
 }

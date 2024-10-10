@@ -3,6 +3,7 @@ import { RestoranService } from "./restoran.service";
 import { RestoranController } from "./restoran.controller";
 import { Restoran, restoranSchema } from "./schemas/restoran.schema";
 import { MongooseModule } from "@nestjs/mongoose";
+import { Language, languageSchema } from "../language/schemass/language.schema";
 
 @Module({
   imports: [
@@ -10,6 +11,10 @@ import { MongooseModule } from "@nestjs/mongoose";
       {
         name: Restoran.name,
         schema: restoranSchema,
+      },
+      {
+        name: Language.name,
+        schema: languageSchema,
       },
     ]),
   ],
