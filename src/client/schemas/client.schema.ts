@@ -1,19 +1,24 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import mongoose, { HydratedDocument } from "mongoose";
 import { Tables } from "../../table/schemas/table.schema";
-import { Language } from "../../language/schemass/language.schema";
 
-export type RestoranDocument = HydratedDocument<Restoran>;
+export type ClientDocument = HydratedDocument<Client>;
 @Schema({ versionKey: false })
-export class Restoran {
+export class Client {
   @Prop()
   name: string;
 
   @Prop()
-  phone_number: string;
+  email: string;
 
   @Prop()
-  description: string;
+  password: string;
+
+  @Prop()
+  address: string;
+
+  @Prop()
+  phone_number: string;
 
   @Prop({
     type: [
@@ -24,12 +29,6 @@ export class Restoran {
     ],
   })
   tables: Tables[];
-
-  @Prop({
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Language",
-  })
-  language_id: Language;
 }
 
-export const restoranSchema = SchemaFactory.createForClass(Restoran);
+export const clietnSchema = SchemaFactory.createForClass(Client);

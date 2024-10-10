@@ -14,7 +14,7 @@ export class RestoranController {
 
   @Get()
   findAll() {
-    return this.restoranService.findAll();
+    return this.restoranService.findAll()
   }
 
   @Get(':id')
