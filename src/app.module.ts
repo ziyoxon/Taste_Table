@@ -5,10 +5,11 @@ import { AdminModule } from './admin/admin.module';
 import { RestoranModule } from './restoran/restoran.module';
 import { TableModule } from './table/table.module';
 import { MenuModule } from './menu/menu.module';
-import { FoodCategoriesModule } from './food-categories/food-categories.module';
 import { LanguageModule } from './language/language.module';
 import { ManagerModule } from './manager/manager.module';
 import { ClientModule } from './client/client.module';
+import { WaiterModule } from './waiter/waiter.module';
+import { ReservationModule } from './reservation/reservation.module';
 
 @Module({
   imports: [
@@ -18,10 +19,12 @@ import { ClientModule } from './client/client.module';
     RestoranModule,
     TableModule,
     MenuModule,
-    FoodCategoriesModule,
     LanguageModule,
     ManagerModule,
     ClientModule,
+    WaiterModule,
+    ReservationModule,
+
   ],
   controllers: [],
   providers: [],
